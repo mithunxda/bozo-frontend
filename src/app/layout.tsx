@@ -64,7 +64,7 @@ export default function RootLayout({
         />
         <SchemaOrg />
       </head>
-      <body className="min-h-full flex flex-col bg-[#07080a] text-[#f9fbfc] antialiased selection:bg-[#ff3b30] selection:text-white">
+      <body className="min-h-full flex flex-col bg-[#07080a] text-[#f9fbfc] antialiased selection:bg-[#f40101] selection:text-white">
         <LanguageProvider>
           <Header />
           <main className="flex-grow">{children}</main>

@@ -26,10 +26,6 @@ export default function BeforeAfterShowcase() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-white/[0.08]">
           <div className="space-y-3">
-            <span className="telemetry-badge">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
-              {t.beforeAfter.badge}
-            </span>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white leading-[1.05]">
               {t.beforeAfter.title} <br />
               <span className="text-[#9ca3af]">{t.beforeAfter.subtitle}</span>
@@ -54,7 +50,7 @@ export default function BeforeAfterShowcase() {
                   onClick={() => setActiveTab(slip.id)}
                   className={`w-full p-4 sm:p-5 rounded-2xl border text-left flex items-center justify-between transition-all duration-300 cursor-pointer ${
                     isSelected
-                      ? "bg-white/[0.08] border-[#ff3b30] shadow-lg shadow-black/40 ring-1 ring-[#ff3b30]/30"
+                      ? "bg-white/[0.08] border-[#1c86ee] shadow-lg shadow-black/40 ring-1 ring-[#1c86ee]/30"
                       : "bg-white/[0.02] border-white/[0.06] hover:bg-white/[0.05] hover:border-white/[0.12]"
                   }`}
                 >
@@ -62,7 +58,7 @@ export default function BeforeAfterShowcase() {
                     <span
                       className={`p-2.5 rounded-xl border transition-colors ${
                         isSelected
-                          ? "bg-[#ff3b30] border-[#ff3b30] text-white"
+                          ? "bg-[#1c86ee] border-[#1c86ee] text-white"
                           : "bg-white/[0.04] border-white/[0.08] text-[#9ca3af]"
                       }`}
                     >
@@ -94,7 +90,7 @@ export default function BeforeAfterShowcase() {
                 {/* Protocol Header */}
                 <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
                   <div className="flex items-center gap-3">
-                    <span className="p-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-[#ff3b30]">
+                    <span className="p-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-[#1c86ee]">
                       <Icon className="w-6 h-6" strokeWidth={1.5} />
                     </span>
                     <div>
@@ -119,7 +115,7 @@ export default function BeforeAfterShowcase() {
                       key={idx}
                       className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex items-center gap-3"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#1c86ee]" />
                       <span>{line}</span>
                     </div>
                   ))}

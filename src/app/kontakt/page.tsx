@@ -38,14 +38,14 @@ export default function ContactPage() {
   return (
     <div className="relative min-h-screen bg-[#07080a] text-white pt-36 sm:pt-44 pb-24 sm:pb-32 overflow-hidden">
       {/* Ambient background lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-red-600/5 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1c86ee]/10 via-[#9932cc]/8 to-[#f40101]/8 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="telemetry-badge">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1c86ee]" />
             {t.contact.badge}
           </span>
 
@@ -89,10 +89,10 @@ export default function ContactPage() {
                   </span>
                   <a
                     href={`tel:${COMPANY.phoneTel}`}
-                    className="font-display text-2xl font-bold text-white hover:text-[#ff3b30] flex items-center justify-between transition-colors"
+                    className="font-display text-2xl font-bold text-white hover:text-[#f40101] flex items-center justify-between transition-colors"
                   >
                     <span>{COMPANY.phoneFormatted}</span>
-                    <Phone className="w-5 h-5 text-[#ff3b30]" strokeWidth={1.5} />
+                    <Phone className="w-5 h-5 text-[#f40101]" strokeWidth={1.5} />
                   </a>
                   <span className="text-[11px] font-mono-tech text-emerald-400 block">
                     ✓ {t.contact.callNow}
@@ -116,7 +116,7 @@ export default function ContactPage() {
                 {/* Address & Navigation */}
                 <div className="space-y-3 pt-2">
                   <div className="flex items-start gap-3 text-xs font-mono-tech">
-                    <MapPin className="w-4 h-4 text-[#ff3b30] shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <MapPin className="w-4 h-4 text-[#1c86ee] shrink-0 mt-0.5" strokeWidth={1.5} />
                     <div className="space-y-0.5">
                       <strong className="text-white block font-sans-ui text-sm">{COMPANY.name}</strong>
                       <span className="text-[#9ca3af] block">{COMPANY.address.street}</span>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="btn-ghost-island w-full justify-center !py-2.5 !text-xs font-mono-tech"
                   >
-                    <Navigation className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+                    <Navigation className="w-3.5 h-3.5 text-[#1c86ee]" strokeWidth={1.5} />
                     <span>{t.contact.getDirections}</span>
                     <ExternalLink className="w-3.5 h-3.5 text-[#9ca3af]" strokeWidth={1.5} />
                   </a>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                         className="p-2 rounded-xl bg-white/[0.02] border border-white/[0.04] flex items-center justify-between"
                       >
                         <span className="text-[#9ca3af] truncate pr-1">{item.from}</span>
-                        <span className="font-bold text-[#ff3b30] shrink-0">{item.time}</span>
+                        <span className="font-bold text-[#1c86ee] shrink-0">{item.time}</span>
                       </div>
                     ))}
                   </div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
               <div className="doppelrand-core space-y-6">
                 
                 <div className="pb-4 border-b border-white/[0.08]">
-                  <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold block">
+                  <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold block">
                     {t.contact.badge}
                   </span>
                   <h3 className="font-display text-2xl font-bold text-white mt-1">
@@ -218,7 +218,7 @@ export default function ContactPage() {
                               onClick={() => setSelectedTopic(tItem.id)}
                               className={`px-3 py-2 rounded-xl text-xs font-mono-tech text-center border transition-all cursor-pointer ${
                                 isSelected
-                                  ? "bg-white/[0.1] border-[#ff3b30] text-white font-bold ring-1 ring-[#ff3b30]/30"
+                                  ? "bg-white/[0.1] border-[#1c86ee] text-white font-bold ring-1 ring-[#1c86ee]/30"
                                   : "bg-white/[0.02] border-white/[0.06] text-[#9ca3af] hover:text-white hover:bg-white/[0.04]"
                               }`}
                             >
@@ -239,7 +239,7 @@ export default function ContactPage() {
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                           placeholder={t.booking.fullName}
                         />
                       </div>
@@ -253,7 +253,7 @@ export default function ContactPage() {
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                           placeholder="+41 79 000 00 00"
                         />
                       </div>
@@ -267,7 +267,7 @@ export default function ContactPage() {
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                         placeholder="beispiel@domain.ch"
                       />
                     </div>
@@ -281,7 +281,7 @@ export default function ContactPage() {
                         required
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                         placeholder={t.booking.notesPlaceholder}
                       />
                     </div>

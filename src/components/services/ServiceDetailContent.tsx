@@ -38,13 +38,13 @@ export default function ServiceDetailContent({ service }: { service: ServiceItem
   const Icon = iconMap[service.iconName] || Wrench;
 
   return (
-    <div className="py-14 sm:py-20 bg-[#090d16] min-h-screen">
+    <div className="py-14 sm:py-20 bg-[#07080a] min-h-screen">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
         <div className="mb-8">
           <Link
             href="/dienstleistungen"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-mono-tech text-[#9ca3af] hover:text-white transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>{t.serviceDetailPage.backToList}</span>
@@ -52,37 +52,37 @@ export default function ServiceDetailContent({ service }: { service: ServiceItem
         </div>
 
         {/* Hero Card */}
-        <div className="glass-card rounded-2xl p-6 sm:p-10 border border-slate-800 mb-10 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+        <div className="rounded-2xl p-6 sm:p-10 bg-white/[0.02] border border-white/[0.08] mb-10 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/[0.08] pb-6">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-rose-600/20 border border-rose-500/40 flex items-center justify-center text-rose-500">
+              <div className="w-14 h-14 rounded-2xl bg-[#1c86ee]/10 border border-[#1c86ee]/25 flex items-center justify-center text-[#1c86ee]">
                 <Icon className="w-7 h-7" />
               </div>
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-rose-400">
+                <span className="text-[11px] font-mono-tech font-bold uppercase tracking-wider text-[#1c86ee]">
                   {t.hero.badge}
                 </span>
-                <h1 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
+                <h1 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight">
                   {service.title[language]}
                 </h1>
               </div>
             </div>
 
             <div className="text-left sm:text-right">
-              <span className="text-xs text-slate-400 block">{t.serviceDetailPage.pricing}</span>
-              <span className="text-lg font-black text-rose-400">
+              <span className="text-xs font-mono-tech text-[#9ca3af] block">{t.serviceDetailPage.pricing}</span>
+              <span className="text-lg font-mono-tech font-bold text-[#f40101]">
                 {service.priceIndication[language]}
               </span>
             </div>
           </div>
 
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p className="text-sm sm:text-base text-[#9ca3af] font-sans-ui leading-relaxed">
             {service.fullDescription[language]}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
             {service.highlights[language].map((h, idx) => (
-              <div key={idx} className="flex items-center gap-2.5 text-xs text-slate-200">
+              <div key={idx} className="flex items-center gap-2.5 text-xs text-[#d1d5db] font-mono-tech">
                 <Check className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span>{h}</span>
               </div>
@@ -90,10 +90,10 @@ export default function ServiceDetailContent({ service }: { service: ServiceItem
           </div>
 
           {/* Quick CTA */}
-          <div className="pt-4 border-t border-slate-800 flex flex-wrap items-center gap-4">
+          <div className="pt-4 border-t border-white/[0.08] flex flex-wrap items-center gap-4">
             <Link
               href={`/termin-buchen?service=${service.id}`}
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white font-bold text-xs uppercase tracking-wider inline-flex items-center gap-2 shadow-lg shadow-rose-950/60 glow-red"
+              className="btn-island !py-3 !px-6 !text-xs cursor-pointer"
             >
               <Calendar className="w-4 h-4" />
               <span>{t.serviceDetailPage.bookNow}</span>
@@ -101,30 +101,30 @@ export default function ServiceDetailContent({ service }: { service: ServiceItem
 
             <a
               href={`tel:${COMPANY.phoneTel}`}
-              className="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs inline-flex items-center gap-2"
+              className="btn-ghost-island !py-3 !px-5 !text-xs font-mono-tech cursor-pointer"
             >
-              <Phone className="w-4 h-4 text-rose-500" />
+              <Phone className="w-4 h-4 text-[#f40101]" />
               <span>{t.serviceDetailPage.callNow}: {COMPANY.phoneFormatted}</span>
             </a>
           </div>
         </div>
 
         {/* Process Breakdown */}
-        <div className="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 mb-10">
-          <h2 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
-            <Clock className="w-4 h-4 text-rose-500" />
+        <div className="rounded-2xl p-6 sm:p-8 bg-white/[0.02] border border-white/[0.08] mb-10">
+          <h2 className="text-lg font-display font-bold text-white mb-6 flex items-center gap-2">
+            <Clock className="w-4 h-4 text-[#1c86ee]" />
             <span>{t.serviceDetailPage.processTitle} ({service.typicalDuration[language]})</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {service.processSteps[language].map((step, idx) => (
-              <div key={idx} className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start gap-3">
-                <span className="w-6 h-6 rounded-lg bg-rose-600 text-white text-xs font-bold flex items-center justify-center shrink-0">
+              <div key={idx} className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-start gap-3">
+                <span className="w-6 h-6 rounded-lg bg-[#1c86ee]/15 border border-[#1c86ee]/30 text-[#1c86ee] text-xs font-mono-tech font-bold flex items-center justify-center shrink-0">
                   {idx + 1}
                 </span>
                 <div>
-                  <h3 className="text-sm font-bold text-white">{step.title}</h3>
-                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                  <h3 className="text-sm font-sans-ui font-bold text-white">{step.title}</h3>
+                  <p className="text-xs font-sans-ui text-[#9ca3af] mt-1 leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -135,17 +135,17 @@ export default function ServiceDetailContent({ service }: { service: ServiceItem
 
         {/* Frequently Asked Questions */}
         {service.faqs[language]?.length > 0 && (
-          <div className="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 mb-10">
-            <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <HelpCircle className="w-4 h-4 text-rose-500" />
+          <div className="rounded-2xl p-6 sm:p-8 bg-white/[0.02] border border-white/[0.08] mb-10">
+            <h2 className="text-lg font-display font-bold text-white mb-4 flex items-center gap-2">
+              <HelpCircle className="w-4 h-4 text-[#1c86ee]" />
               <span>{t.serviceDetailPage.faqTitle}: {service.title[language]}</span>
             </h2>
 
             <div className="space-y-4">
               {service.faqs[language].map((faq, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
-                  <h3 className="text-sm font-bold text-slate-200">{faq.q}</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">{faq.a}</p>
+                <div key={idx} className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] space-y-1.5">
+                  <h3 className="text-sm font-sans-ui font-bold text-white">{faq.q}</h3>
+                  <p className="text-xs font-sans-ui text-[#9ca3af] leading-relaxed">{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -153,21 +153,21 @@ export default function ServiceDetailContent({ service }: { service: ServiceItem
         )}
 
         {/* Guarantees Box */}
-        <div className="p-5 rounded-xl bg-emerald-950/30 border border-emerald-800/60 flex items-start sm:items-center justify-between gap-4">
+        <div className="p-5 rounded-xl bg-emerald-950/20 border border-emerald-500/20 flex items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <ShieldCheck className="w-6 h-6 text-emerald-400 shrink-0" />
             <div className="text-xs">
-              <strong className="text-white block font-semibold">
+              <strong className="text-white block font-semibold font-sans-ui">
                 {t.hero.eyebrow2} · {t.valueProps.props[0].title}
               </strong>
-              <span className="text-slate-400">
+              <span className="text-[#9ca3af] font-sans-ui">
                 {t.valueProps.props[3].description}
               </span>
             </div>
           </div>
           <Link
             href="/termin-buchen"
-            className="text-xs font-bold text-emerald-400 hover:text-emerald-300 shrink-0 flex items-center gap-1"
+            className="text-xs font-mono-tech font-bold text-emerald-400 hover:text-emerald-300 shrink-0 flex items-center gap-1"
           >
             <span>{t.nav.bookNow}</span>
             <ArrowRight className="w-3.5 h-3.5" />

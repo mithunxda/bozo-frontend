@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="pt-2 space-y-2 text-xs font-mono-tech text-[#d1d5db]">
               {t.footer.benefits.map((benefit, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <CheckCircle2 className={`w-3.5 h-3.5 ${i === 1 ? "text-emerald-400" : "text-[#ff3b30]"}`} strokeWidth={1.5} />
+                  <CheckCircle2 className={`w-3.5 h-3.5 ${i === 1 ? "text-emerald-400" : "text-[#1c86ee]"}`} strokeWidth={1.5} />
                   <span>{benefit}</span>
                 </div>
               ))}
@@ -73,7 +73,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-3 text-xs font-mono-tech">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#ff3b30] shrink-0 mt-0.5" strokeWidth={1.5} />
+                <MapPin className="w-4 h-4 text-[#1c86ee] shrink-0 mt-0.5" strokeWidth={1.5} />
                 <div className="space-y-0.5">
                   <strong className="text-white block font-sans-ui text-xs">{COMPANY.name}</strong>
                   <span>{COMPANY.address.street}</span>
@@ -82,14 +82,14 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center gap-2.5 pt-1">
-                <Phone className="w-4 h-4 text-[#ff3b30] shrink-0" strokeWidth={1.5} />
-                <a href={`tel:${COMPANY.phoneTel}`} className="text-white hover:text-[#ff3b30] transition-colors font-bold">
+                <Phone className="w-4 h-4 text-[#f40101] shrink-0" strokeWidth={1.5} />
+                <a href={`tel:${COMPANY.phoneTel}`} className="text-white hover:text-[#f40101] transition-colors font-bold whitespace-nowrap">
                   {COMPANY.phoneFormatted}
                 </a>
               </div>
 
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#ff3b30] shrink-0" strokeWidth={1.5} />
+                <Mail className="w-4 h-4 text-[#1c86ee] shrink-0" strokeWidth={1.5} />
                 <a href={`mailto:${COMPANY.email}`} className="text-[#9ca3af] hover:text-white transition-colors">
                   {COMPANY.email}
                 </a>
@@ -158,7 +158,7 @@ export default function Footer() {
               href={COMPANY.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#ff3b30] flex items-center gap-1 font-semibold"
+              className="text-white hover:text-[#1c86ee] flex items-center gap-1 font-semibold transition-colors"
             >
               <span>4.9 Google</span>
               <Star className="w-3 h-3 fill-amber-400 text-amber-400 inline" />

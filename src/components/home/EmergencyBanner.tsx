@@ -3,7 +3,7 @@
 import React from "react";
 import { COMPANY } from "@/data/company";
 import { useLanguage } from "@/context/LanguageContext";
-import { Phone, MessageCircle, AlertCircle } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 
 export default function EmergencyBanner() {
   const { t } = useLanguage();
@@ -20,10 +20,6 @@ export default function EmergencyBanner() {
           </div>
           
           <div className="max-w-2xl text-center lg:text-left space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-[10px] font-mono-tech uppercase tracking-wider text-red-400">
-              <AlertCircle className="w-3.5 h-3.5 text-red-400" strokeWidth={1.5} />
-              {t.emergency.badge}
-            </div>
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
               {t.emergency.title}
             </h2>

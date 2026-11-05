@@ -12,17 +12,13 @@ export default function GoogleReviews() {
   return (
     <section className="relative py-24 lg:py-36 bg-[#07080a] text-white overflow-hidden border-t border-white/[0.06]">
       {/* Background glow */}
-      <div className="absolute top-1/2 right-1/4 w-[500px] h-[300px] bg-red-600/5 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 w-[500px] h-[300px] bg-gradient-to-tr from-[#1c86ee]/5 via-[#9932cc]/5 to-[#f40101]/5 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-white/[0.08]">
           <div className="space-y-3">
-            <span className="telemetry-badge">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
-              {t.reviews.badge}
-            </span>
             <div className="flex items-center gap-3">
               <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white leading-[1.05]">
                 {t.reviews.title} <br />
@@ -62,7 +58,7 @@ export default function GoogleReviews() {
                         </span>
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" strokeWidth={1.5} />
                       </div>
-                      <span className="text-[11px] font-mono-tech text-[#ff3b30] block mt-0.5">
+                      <span className="text-[11px] font-mono-tech text-[#1c86ee] block mt-0.5">
                         {rev.vehicle}
                       </span>
                     </div>
@@ -110,7 +106,7 @@ export default function GoogleReviews() {
             className="btn-ghost-island !py-2.5 !px-5 !text-xs font-mono-tech"
           >
             <span>{t.reviews.leaveReview}</span>
-            <ExternalLink className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+            <ExternalLink className="w-3.5 h-3.5 text-[#1c86ee]" strokeWidth={1.5} />
           </a>
         </div>
 

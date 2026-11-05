@@ -246,17 +246,13 @@ export default function ServiceCalculator() {
   return (
     <section className="relative py-24 lg:py-36 bg-[#07080a] text-white overflow-hidden border-t border-white/[0.06]">
       {/* Background Subtle Ambient Laser */}
-      <div className="absolute top-1/2 left-1/3 w-[600px] h-[350px] bg-red-600/5 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 w-[600px] h-[350px] bg-gradient-to-tr from-[#1c86ee]/5 via-[#9932cc]/5 to-[#f40101]/5 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-white/[0.08]">
           <div className="space-y-3">
-            <span className="telemetry-badge">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
-              {t.calculator.title}
-            </span>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white leading-[1.05]">
               {t.calculator.title} <br />
               <span className="text-[#9ca3af]">{t.calculator.estimatedCost}</span>
@@ -278,7 +274,7 @@ export default function ServiceCalculator() {
                 <span className="text-xs font-mono-tech uppercase tracking-wider text-[#9ca3af]">
                   {t.calculator.selectVehicle}
                 </span>
-                <Car className="w-4 h-4 text-[#ff3b30]" strokeWidth={1.5} />
+                <Car className="w-4 h-4 text-[#1c86ee]" strokeWidth={1.5} />
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -290,7 +286,7 @@ export default function ServiceCalculator() {
                       onClick={() => setSelectedVehicle(v.id)}
                       className={`p-3.5 rounded-2xl text-left border transition-all duration-300 cursor-pointer ${
                         isSelected
-                          ? "bg-white/[0.1] border-white/[0.2] text-white shadow-lg shadow-black/40 ring-1 ring-white/10"
+                          ? "bg-white/[0.1] border-[#1c86ee]/40 text-white shadow-lg shadow-black/40 ring-1 ring-[#1c86ee]/30"
                           : "bg-white/[0.02] border-white/[0.06] text-[#9ca3af] hover:text-white hover:bg-white/[0.04] hover:border-white/[0.1]"
                       }`}
                     >
@@ -312,7 +308,7 @@ export default function ServiceCalculator() {
                 <span className="text-xs font-mono-tech uppercase tracking-wider text-[#9ca3af]">
                   {t.calculator.selectPackage}
                 </span>
-                <Zap className="w-4 h-4 text-[#ff3b30]" strokeWidth={1.5} />
+                <Zap className="w-4 h-4 text-[#f40101]" strokeWidth={1.5} />
               </div>
 
               <div className="space-y-3">
@@ -325,7 +321,7 @@ export default function ServiceCalculator() {
                       onClick={() => setSelectedPackageId(pkg.id)}
                       className={`w-full p-4 sm:p-5 rounded-2xl border text-left flex items-center justify-between transition-all duration-300 cursor-pointer group ${
                         isSelected
-                          ? "bg-white/[0.08] border-[#ff3b30] shadow-xl shadow-red-950/20 ring-1 ring-[#ff3b30]/30"
+                          ? "bg-white/[0.08] border-[#1c86ee] shadow-xl shadow-blue-950/20 ring-1 ring-[#1c86ee]/40"
                           : "bg-white/[0.02] border-white/[0.06] hover:bg-white/[0.05] hover:border-white/[0.12]"
                       }`}
                     >
@@ -334,7 +330,7 @@ export default function ServiceCalculator() {
                           {pkg.name[language]}
                         </span>
                         <div className="flex items-center gap-2 text-xs font-mono-tech text-[#9ca3af]">
-                          <Clock className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+                          <Clock className="w-3.5 h-3.5 text-[#1c86ee]" strokeWidth={1.5} />
                           <span>{t.calculator.duration}: {pkg.duration[language]}</span>
                         </div>
                       </div>
@@ -363,7 +359,7 @@ export default function ServiceCalculator() {
                 {/* Header */}
                 <div className="flex items-start justify-between pb-4 border-b border-white/[0.08]">
                   <div className="space-y-1">
-                    <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold block">
+                    <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold block">
                       {t.calculator.estimatedCost}
                     </span>
                     <h3 className="font-display text-xl font-bold text-white">
@@ -398,7 +394,7 @@ export default function ServiceCalculator() {
                 {/* Trust Guarantee Note */}
                 <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.06] text-xs font-mono-tech text-[#9ca3af] space-y-1">
                   <div className="flex items-center gap-1.5 text-white font-semibold">
-                    <ShieldCheck className="w-4 h-4 text-[#ff3b30]" strokeWidth={1.5} />
+                    <ShieldCheck className="w-4 h-4 text-[#1c86ee]" strokeWidth={1.5} />
                     <span>{t.valueProps.props[0].title}:</span>
                   </div>
                   <p className="text-[11px] text-[#6b7280] leading-relaxed">

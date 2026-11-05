@@ -21,10 +21,6 @@ export default function FaqSection() {
         
         {/* Header */}
         <div className="space-y-4 text-center sm:text-left">
-          <span className="telemetry-badge">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
-            {t.faqs.badge}
-          </span>
           <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white leading-[1.05]">
             {t.faqs.title} <br />
             <span className="text-[#9ca3af]">{t.faqs.subtitle}</span>
@@ -49,7 +45,7 @@ export default function FaqSection() {
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-xs font-mono-tech text-[#ff3b30]">
+                    <span className="text-xs font-mono-tech text-[#1c86ee]">
                       {`0${idx + 1} //`}
                     </span>
                     <span className="font-display text-base sm:text-lg font-bold text-white">
@@ -59,7 +55,7 @@ export default function FaqSection() {
 
                   <span
                     className={`w-7 h-7 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 bg-white/[0.1] text-[#ff3b30]" : "text-[#9ca3af]"
+                      isOpen ? "rotate-180 bg-white/[0.1] text-[#1c86ee]" : "text-[#9ca3af]"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" strokeWidth={1.5} />
@@ -83,7 +79,7 @@ export default function FaqSection() {
         {/* Contact fallback prompt */}
         <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <HelpCircle className="w-5 h-5 text-[#ff3b30]" strokeWidth={1.5} />
+            <HelpCircle className="w-5 h-5 text-[#1c86ee]" strokeWidth={1.5} />
             <span className="font-sans-ui text-xs sm:text-sm text-[#d1d5db]">
               {t.faqs.stillQuestions}
             </span>
@@ -93,7 +89,7 @@ export default function FaqSection() {
             href={`tel:${COMPANY.phoneTel}`}
             className="btn-ghost-island !py-2 !px-4 !text-xs font-mono-tech"
           >
-            <Phone className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+            <Phone className="w-3.5 h-3.5 text-[#f40101]" strokeWidth={1.5} />
             <span>{t.faqs.directCall}: {COMPANY.phoneFormatted}</span>
           </a>
         </div>

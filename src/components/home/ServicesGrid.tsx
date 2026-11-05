@@ -21,17 +21,13 @@ export default function ServicesGrid() {
   return (
     <section className="relative py-24 lg:py-36 bg-[#07080a] text-white overflow-hidden border-t border-white/[0.06]">
       {/* Background Subtle Laser Glow */}
-      <div className="absolute top-1/3 right-1/4 w-[600px] h-[350px] bg-red-600/5 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[600px] h-[350px] bg-gradient-to-tr from-[#1c86ee]/5 via-[#9932cc]/5 to-[#f40101]/5 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         
         {/* Section Heading with Telemetry Eyebrow */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-white/[0.08]">
           <div className="space-y-3">
-            <span className="telemetry-badge">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
-              {t.services.badge}
-            </span>
             <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white leading-[1.05]">
               {t.services.title} <br />
               <span className="text-[#9ca3af]">{t.services.titleHighlight}</span>
@@ -51,7 +47,7 @@ export default function ServicesGrid() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="p-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-[#ff3b30]">
+                    <span className="p-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-[#1c86ee]">
                       <Cpu className="w-5 h-5" strokeWidth={1.5} />
                     </span>
                     <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#9ca3af]">
@@ -90,10 +86,10 @@ export default function ServicesGrid() {
                 </Link>
                 <Link
                   href="/termin-buchen?service=mfk"
-                  className="inline-flex items-center gap-2 text-xs font-mono-tech text-white hover:text-[#ff3b30] transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-xs font-mono-tech text-white hover:text-[#1c86ee] transition-colors group/link"
                 >
                   <span>{t.services.card1CtaBook}</span>
-                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 text-[#ff3b30]" strokeWidth={1.5} />
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 text-[#1c86ee]" strokeWidth={1.5} />
                 </Link>
               </div>
             </div>
@@ -104,10 +100,10 @@ export default function ServicesGrid() {
             <div className="doppelrand-core flex flex-col justify-between space-y-6 bg-gradient-to-b from-[#121620] to-[#0a0c10]">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="p-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-[#ff3b30]">
+                  <span className="p-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-[#f40101]">
                     <Car className="w-5 h-5" strokeWidth={1.5} />
                   </span>
-                  <span className="font-display text-2xl font-bold text-[#ff3b30]">
+                  <span className="font-display text-2xl font-bold text-[#f40101]">
                     0 CHF
                   </span>
                 </div>
@@ -173,10 +169,10 @@ export default function ServicesGrid() {
 
               <Link
                 href="/termin-buchen?service=service-reparatur"
-                className="inline-flex items-center gap-2 text-xs font-mono-tech text-white hover:text-[#ff3b30] transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-mono-tech text-white hover:text-[#1c86ee] transition-colors"
               >
                 <span>{t.services.bookThisService}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#1c86ee]" strokeWidth={1.5} />
               </Link>
             </div>
           </div>
@@ -214,10 +210,10 @@ export default function ServicesGrid() {
 
               <Link
                 href="/termin-buchen?service=service-reparatur"
-                className="inline-flex items-center gap-2 text-xs font-mono-tech text-white hover:text-[#ff3b30] transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-mono-tech text-white hover:text-[#f40101] transition-colors"
               >
                 <span>{t.services.bookThisService}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#f40101]" strokeWidth={1.5} />
               </Link>
             </div>
           </div>
@@ -255,10 +251,10 @@ export default function ServicesGrid() {
 
               <Link
                 href="/termin-buchen?service=rad-reifenservice"
-                className="inline-flex items-center gap-2 text-xs font-mono-tech text-white hover:text-[#ff3b30] transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-mono-tech text-white hover:text-[#1c86ee] transition-colors"
               >
                 <span>{t.services.bookThisService}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#1c86ee]" strokeWidth={1.5} />
               </Link>
             </div>
           </div>
@@ -267,7 +263,7 @@ export default function ServicesGrid() {
           <div className="md:col-span-12 doppelrand-shell">
             <div className="doppelrand-core !p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6 bg-gradient-to-r from-[#0d1017] via-[#0e121a] to-[#121622]">
               <div className="space-y-2 max-w-2xl">
-                <div className="flex items-center gap-2 text-xs font-mono-tech text-[#ff3b30]">
+                <div className="flex items-center gap-2 text-xs font-mono-tech text-[#1c86ee]">
                   <FileCheck className="w-4 h-4" strokeWidth={1.5} />
                   <span>{t.services.card3Badge}</span>
                 </div>

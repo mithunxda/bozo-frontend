@@ -256,7 +256,7 @@ export default function BookingWizard() {
               </div>
               <div className="flex justify-between border-b border-white/[0.04] pb-2">
                 <span className="text-[#9ca3af]">{t.booking.receiptDate}</span>
-                <strong className="text-[#ff3b30]">
+                <strong className="text-[#f40101]">
                   {formData.date} ({getTimeSlotLabel(formData.timeSlot)})
                 </strong>
               </div>
@@ -273,7 +273,7 @@ export default function BookingWizard() {
                 onClick={downloadCalendarInvite}
                 className="btn-ghost-island w-full sm:w-auto justify-center !py-3 !text-xs font-mono-tech cursor-pointer"
               >
-                <Download className="w-4 h-4 text-[#ff3b30]" strokeWidth={1.5} />
+                <Download className="w-4 h-4 text-[#1c86ee]" strokeWidth={1.5} />
                 <span>{t.booking.downloadCalendar}</span>
               </button>
 
@@ -323,7 +323,7 @@ export default function BookingWizard() {
                         isDone
                           ? "bg-emerald-400 shadow-[0_0_8px_rgba(74,222,128,0.5)]"
                           : isCurrent
-                          ? "bg-[#ff3b30] shadow-[0_0_10px_rgba(255,59,48,0.7)]"
+                          ? "bg-[#f40101] shadow-[0_0_10px_rgba(244,1,1,0.7)]"
                           : "bg-white/[0.06]"
                       }`}
                     />
@@ -346,7 +346,7 @@ export default function BookingWizard() {
 
           {/* Validation Alert */}
           {errorMsg && (
-            <div className="p-3.5 rounded-xl bg-red-950/40 border border-red-500/30 text-red-300 text-xs font-mono-tech flex items-center gap-2 animate-fluid-fade">
+            <div className="p-3.5 rounded-xl bg-red-950/40 border border-[#f40101]/30 text-red-300 text-xs font-mono-tech flex items-center gap-2 animate-fluid-fade">
               <span>⚠️</span>
               <span>{errorMsg}</span>
             </div>
@@ -356,7 +356,7 @@ export default function BookingWizard() {
           {step === 1 && (
             <div className="space-y-6">
               <div className="space-y-1">
-                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold block">
+                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold block">
                   {t.booking.step1Badge}
                 </span>
                 <h3 className="font-display text-2xl font-bold text-white">
@@ -377,7 +377,7 @@ export default function BookingWizard() {
                       onClick={() => toggleService(s.id)}
                       className={`p-4 rounded-2xl border text-left flex items-start justify-between transition-all duration-300 cursor-pointer ${
                         selected
-                          ? "bg-white/[0.08] border-[#ff3b30] text-white shadow-lg shadow-black/40 ring-1 ring-[#ff3b30]/30"
+                          ? "bg-white/[0.08] border-[#1c86ee] text-white shadow-lg shadow-black/40 ring-1 ring-[#1c86ee]/30"
                           : "bg-white/[0.02] border-white/[0.06] text-[#d1d5db] hover:bg-white/[0.04] hover:border-white/[0.12]"
                       }`}
                     >
@@ -392,7 +392,7 @@ export default function BookingWizard() {
                       <div
                         className={`w-5 h-5 rounded-lg border flex items-center justify-center shrink-0 mt-0.5 text-xs transition-colors ${
                           selected
-                            ? "bg-[#ff3b30] border-[#ff3b30] text-white"
+                            ? "bg-[#1c86ee] border-[#1c86ee] text-white"
                             : "border-white/[0.1] bg-black/40 text-transparent"
                         }`}
                       >
@@ -407,7 +407,7 @@ export default function BookingWizard() {
                   onClick={() => toggleService("sonstiges")}
                   className={`p-4 rounded-2xl border text-left flex items-start justify-between transition-all duration-300 cursor-pointer ${
                     formData.serviceIds.includes("sonstiges")
-                      ? "bg-white/[0.08] border-[#ff3b30] text-white shadow-lg ring-1 ring-[#ff3b30]/30"
+                      ? "bg-white/[0.08] border-[#1c86ee] text-white shadow-lg ring-1 ring-[#1c86ee]/30"
                       : "bg-white/[0.02] border-white/[0.06] text-[#d1d5db] hover:bg-white/[0.04]"
                   }`}
                 >
@@ -422,7 +422,7 @@ export default function BookingWizard() {
                   <div
                     className={`w-5 h-5 rounded-lg border flex items-center justify-center shrink-0 mt-0.5 text-xs transition-colors ${
                       formData.serviceIds.includes("sonstiges")
-                        ? "bg-[#ff3b30] border-[#ff3b30] text-white"
+                        ? "bg-[#1c86ee] border-[#1c86ee] text-white"
                         : "border-white/[0.1] bg-black/40 text-transparent"
                     }`}
                   >
@@ -437,7 +437,7 @@ export default function BookingWizard() {
           {step === 2 && (
             <div className="space-y-6">
               <div className="space-y-1">
-                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold block">
+                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold block">
                   {t.booking.step2Badge}
                 </span>
                 <h3 className="font-display text-2xl font-bold text-white">
@@ -461,7 +461,7 @@ export default function BookingWizard() {
                       onClick={() => setFormData({ ...formData, vehicleBrand: brand })}
                       className={`px-3 py-1.5 rounded-xl text-xs font-mono-tech border transition-all cursor-pointer ${
                         formData.vehicleBrand === brand
-                          ? "bg-white/[0.12] border-[#ff3b30] text-white font-bold"
+                          ? "bg-white/[0.12] border-[#1c86ee] text-white font-bold ring-1 ring-[#1c86ee]/30"
                           : "bg-white/[0.02] border-white/[0.06] text-[#9ca3af] hover:text-white hover:bg-white/[0.04]"
                       }`}
                     >
@@ -481,7 +481,7 @@ export default function BookingWizard() {
                     placeholder={t.booking.brandPlaceholder}
                     value={formData.vehicleBrand}
                     onChange={(e) => setFormData({ ...formData, vehicleBrand: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                     required
                   />
                 </div>
@@ -495,7 +495,7 @@ export default function BookingWizard() {
                     placeholder={t.booking.modelPlaceholder}
                     value={formData.vehicleModel}
                     onChange={(e) => setFormData({ ...formData, vehicleModel: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                   />
                 </div>
 
@@ -508,7 +508,7 @@ export default function BookingWizard() {
                     placeholder={t.booking.platePlaceholder}
                     value={formData.licensePlate}
                     onChange={(e) => setFormData({ ...formData, licensePlate: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                   />
                 </div>
               </div>
@@ -529,13 +529,13 @@ export default function BookingWizard() {
                         onClick={() => setFormData({ ...formData, mobility: m.id })}
                         className={`p-3.5 rounded-xl border text-left flex items-start justify-between cursor-pointer transition-all ${
                           isSelected
-                            ? "bg-white/[0.1] border-[#ff3b30] text-white shadow-lg ring-1 ring-[#ff3b30]/30"
+                            ? "bg-white/[0.1] border-[#1c86ee] text-white shadow-lg ring-1 ring-[#1c86ee]/30"
                             : "bg-white/[0.02] border-white/[0.06] text-[#9ca3af] hover:text-white hover:bg-white/[0.04]"
                         }`}
                       >
                         <div className="flex items-start gap-2.5">
                           <MIcon
-                            className={`w-4 h-4 mt-0.5 ${isSelected ? "text-[#ff3b30]" : "text-[#6b7280]"}`}
+                            className={`w-4 h-4 mt-0.5 ${isSelected ? "text-[#1c86ee]" : "text-[#6b7280]"}`}
                             strokeWidth={1.5}
                           />
                           <div>
@@ -564,7 +564,7 @@ export default function BookingWizard() {
           {step === 3 && (
             <div className="space-y-6">
               <div className="space-y-1">
-                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold block">
+                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold block">
                   {t.booking.step3Badge}
                 </span>
                 <h3 className="font-display text-2xl font-bold text-white">
@@ -585,7 +585,7 @@ export default function BookingWizard() {
                     min={minDate || undefined}
                     value={formData.date}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all [color-scheme:dark]"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all [color-scheme:dark]"
                     required
                   />
                 </div>
@@ -597,7 +597,7 @@ export default function BookingWizard() {
                   <select
                     value={formData.timeSlot}
                     onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-[#0e1117] border border-white/[0.08] text-white text-xs font-mono-tech focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-[#0e1117] border border-white/[0.08] text-white text-xs font-mono-tech focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                   >
                     <option value="morning">{t.booking.timeSlots.morning}</option>
                     <option value="afternoon">{t.booking.timeSlots.afternoon}</option>
@@ -608,7 +608,7 @@ export default function BookingWizard() {
 
               {/* 24/7 Key Drop Info */}
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] text-xs font-mono-tech text-[#9ca3af] flex items-start gap-3">
-                <Clock className="w-4 h-4 text-[#ff3b30] shrink-0 mt-0.5" strokeWidth={1.5} />
+                <Clock className="w-4 h-4 text-[#1c86ee] shrink-0 mt-0.5" strokeWidth={1.5} />
                 <div>
                   <strong className="text-white block mb-0.5">
                     {t.booking.keySafeNoticeTitle}
@@ -623,7 +623,7 @@ export default function BookingWizard() {
           {step === 4 && (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-1">
-                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold block">
+                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold block">
                   {t.booking.step4Badge}
                 </span>
                 <h3 className="font-display text-2xl font-bold text-white">
@@ -644,7 +644,7 @@ export default function BookingWizard() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#9ca3af]">{t.booking.summaryDate}:</span>
-                  <span className="font-bold text-[#ff3b30]">{formData.date}</span>
+                  <span className="font-bold text-[#f40101]">{formData.date}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#9ca3af]">{t.booking.summaryMobility}:</span>
@@ -670,7 +670,7 @@ export default function BookingWizard() {
                     }
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                     required
                   />
                 </div>
@@ -684,7 +684,7 @@ export default function BookingWizard() {
                     placeholder="+41 79 123 45 67"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                     required
                   />
                 </div>
@@ -698,7 +698,7 @@ export default function BookingWizard() {
                     placeholder="info@bozoautomobile.ch"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                   />
                 </div>
 
@@ -711,7 +711,7 @@ export default function BookingWizard() {
                     placeholder={t.booking.notesPlaceholder}
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#ff3b30] focus:ring-1 focus:ring-[#ff3b30]/30 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white text-xs font-mono-tech placeholder:text-[#6b7280] focus:outline-none focus:border-[#1c86ee] focus:ring-1 focus:ring-[#1c86ee]/30 transition-all"
                   />
                 </div>
               </div>

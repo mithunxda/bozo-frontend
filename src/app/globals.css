@@ -15,10 +15,20 @@
   --ink-secondary: #9ca3af;
   --ink-muted: #6b7280;
 
-  --accent: #ff3b30;
-  --accent-hover: #e0241a;
-  --accent-glow: rgba(255, 59, 48, 0.25);
+  --accent: #f40101;
+  --accent-hover: #c90000;
+  --accent-glow: rgba(244, 1, 1, 0.28);
   --accent-ink: #ffffff;
+
+  --brand-blue: #1c86ee;
+  --brand-blue-hover: #166ecc;
+  --brand-blue-glow: rgba(28, 134, 238, 0.28);
+  --brand-blue-ink: #ffffff;
+
+  --brand-purple: #9932cc;
+  --brand-purple-glow: rgba(153, 50, 204, 0.25);
+
+  --brand-red: #f40101;
 
   --border-hairline: rgba(255, 255, 255, 0.08);
   --border-highlight: rgba(255, 255, 255, 0.16);
@@ -78,9 +88,9 @@ body {
   position: absolute;
   pointer-events: none;
   border-radius: 9999px;
-  filter: blur(120px);
-  opacity: 0.15;
-  background: radial-gradient(circle, #ff3b30 0%, transparent 70%);
+  filter: blur(140px);
+  opacity: 0.16;
+  background: radial-gradient(circle at 35% 35%, #1c86ee 0%, #9932cc 38%, #f40101 70%, transparent 100%);
 }
 
 /* Double-Bezel (Doppelrand) Nested Hardware Architecture */
@@ -96,7 +106,7 @@ body {
 
 .doppelrand-shell:hover {
   border-color: var(--border-highlight);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 30px -10px var(--accent-glow);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 30px -10px var(--brand-blue-glow);
 }
 
 .doppelrand-core {
@@ -117,18 +127,18 @@ body {
   gap: 0.75rem;
   padding: 0.875rem 1.75rem;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #ff3b30 0%, #d92015 100%);
+  background: linear-gradient(135deg, #f40101 0%, #c90000 100%);
   color: #ffffff;
   font-family: var(--font-sans);
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  box-shadow: 0 0 25px rgba(255, 59, 48, 0.35);
+  box-shadow: 0 0 25px rgba(244, 1, 1, 0.35);
   transition: all 500ms var(--ease-spring);
 }
 
 .btn-island:hover {
-  box-shadow: 0 0 35px rgba(255, 59, 48, 0.55);
+  box-shadow: 0 0 35px rgba(244, 1, 1, 0.55);
   transform: translateY(-1px);
 }
 
@@ -247,6 +257,18 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--brand-blue);
   outline-offset: 3px;
 }
+
+/* Brand Palette Utility Classes */
+.text-brand-red { color: #f40101; }
+.text-brand-blue { color: #1c86ee; }
+.text-brand-purple { color: #9932cc; }
+.bg-brand-red { background-color: #f40101; }
+.bg-brand-blue { background-color: #1c86ee; }
+.bg-brand-purple { background-color: #9932cc; }
+.border-brand-red { border-color: #f40101; }
+.border-brand-blue { border-color: #1c86ee; }
+.border-brand-purple { border-color: #9932cc; }
+

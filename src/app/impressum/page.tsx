@@ -9,17 +9,17 @@ export default function ImpressumPage() {
   const lp = t.legalPages;
 
   return (
-    <div className="py-24 sm:py-32 bg-[#090d16] min-h-screen text-white">
+    <div className="py-24 sm:py-32 bg-[#07080a] min-h-screen text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-card rounded-2xl p-8 sm:p-12 border border-slate-800 space-y-8">
-          <h1 className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight border-b border-slate-800 pb-4">
+        <div className="rounded-2xl p-8 sm:p-12 bg-white/[0.02] border border-white/[0.08] space-y-8">
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-4">
             {lp.impressumTitle}
           </h1>
 
-          <div className="space-y-6 text-sm text-slate-300 leading-relaxed font-sans-ui">
+          <div className="space-y-6 text-sm text-[#9ca3af] leading-relaxed font-sans-ui">
             <div>
               <h2 className="text-base font-bold text-white mb-2 font-display">{lp.swissLawTitle}</h2>
-              <p className="font-semibold text-slate-100">{COMPANY.legalName}</p>
+              <p className="font-semibold text-white">{COMPANY.legalName}</p>
               <p>{COMPANY.address.street}</p>
               <p>
                 {COMPANY.address.postalCode} {COMPANY.address.city}
@@ -31,13 +31,13 @@ export default function ImpressumPage() {
               <h2 className="text-base font-bold text-white mb-2 font-display">{lp.contactTitle}</h2>
               <p>
                 Telefon:{" "}
-                <a href={`tel:${COMPANY.phoneTel}`} className="text-rose-400 hover:underline">
+                <a href={`tel:${COMPANY.phoneTel}`} className="text-[#1c86ee] hover:underline font-mono-tech">
                   {COMPANY.phone}
                 </a>
               </p>
               <p>
                 E-Mail:{" "}
-                <a href={`mailto:${COMPANY.email}`} className="text-rose-400 hover:underline">
+                <a href={`mailto:${COMPANY.email}`} className="text-[#1c86ee] hover:underline font-mono-tech">
                   {COMPANY.email}
                 </a>
               </p>
@@ -47,7 +47,7 @@ export default function ImpressumPage() {
                   href="https://bozoautomobile.ch"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-rose-400 hover:underline"
+                  className="text-[#1c86ee] hover:underline font-mono-tech"
                 >
                   https://bozoautomobile.ch
                 </a>

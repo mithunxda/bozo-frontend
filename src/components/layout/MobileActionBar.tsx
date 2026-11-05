@@ -19,7 +19,7 @@ export default function MobileActionBar() {
           href={`tel:${COMPANY.phoneTel}`}
           className="flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#171a21] text-[#f7f9fa] font-sans-ui text-xs font-semibold hover:bg-[#202530]"
         >
-          <Phone className="w-3.5 h-3.5 text-[#d92b21]" />
+          <Phone className="w-3.5 h-3.5 text-[#f40101]" />
           <span>{t.mobileActionBar.call}</span>
         </a>
 
@@ -35,7 +35,7 @@ export default function MobileActionBar() {
 
         <Link
           href="/termin-buchen"
-          className="flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#d92b21] text-white font-sans-ui text-xs font-bold hover:bg-[#b82219]"
+          className="flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#f40101] text-white font-sans-ui text-xs font-bold hover:bg-[#c90000] shadow-[0_0_12px_rgba(244,1,1,0.3)]"
         >
           <Calendar className="w-3.5 h-3.5" />
           <span>{t.mobileActionBar.book}</span>

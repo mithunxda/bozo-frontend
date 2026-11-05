@@ -32,18 +32,18 @@ export default function ServicesPage() {
   const { language, t } = useLanguage();
 
   return (
-    <div className="py-16 sm:py-24 bg-[#090d16] min-h-screen">
+    <div className="py-16 sm:py-24 bg-[#07080a] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-rose-400 text-xs font-semibold mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1c86ee]/10 border border-[#1c86ee]/25 text-[#1c86ee] text-xs font-mono-tech font-semibold mb-3">
             <span>{t.servicesPage.badge}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
             {t.servicesPage.title}
           </h1>
 
-          <p className="mt-3 text-sm sm:text-base text-slate-400">
+          <p className="mt-3 text-sm sm:text-base text-[#9ca3af] font-sans-ui">
             {t.servicesPage.subtitle}
           </p>
         </div>
@@ -58,35 +58,35 @@ export default function ServicesPage() {
               <div
                 key={s.id}
                 id={s.slug}
-                className="glass-card rounded-2xl p-6 sm:p-10 border border-slate-800 hover:border-slate-700 transition-all"
+                className="rounded-2xl p-6 sm:p-10 bg-white/[0.02] border border-white/[0.08] hover:border-white/[0.16] transition-all"
               >
                 <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${isEven ? "lg:flex-row-reverse" : ""}`}>
                   {/* Left Column: Details */}
                   <div className="lg:col-span-7 space-y-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-rose-500">
+                      <div className="w-12 h-12 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#1c86ee]">
                         <Icon className="w-6 h-6" />
                       </div>
                       <div>
-                        <h2 className="text-2xl font-bold text-white tracking-tight">
+                        <h2 className="text-2xl font-display font-bold text-white tracking-tight">
                           {s.title[language]}
                         </h2>
-                        <span className="text-xs text-rose-400 font-medium">
+                        <span className="text-xs text-[#f40101] font-mono-tech font-bold">
                           {s.priceIndication[language]}
                         </span>
                       </div>
                     </div>
 
-                    <p className="text-sm text-slate-300 leading-relaxed">
+                    <p className="text-sm text-[#d1d5db] font-sans-ui leading-relaxed">
                       {s.fullDescription[language]}
                     </p>
 
                     {/* Highlights */}
                     <div className="pt-2">
-                      <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">
+                      <span className="text-xs font-mono-tech font-bold uppercase tracking-wider text-[#9ca3af] block mb-2">
                         {t.servicesPage.benefitsTitle}
                       </span>
-                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#9ca3af] font-mono-tech">
                         {s.highlights[language].map((h, hIdx) => (
                           <li key={hIdx} className="flex items-center gap-2">
                             <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
@@ -99,7 +99,7 @@ export default function ServicesPage() {
                     <div className="pt-4 flex flex-wrap items-center gap-3">
                       <Link
                         href={`/dienstleistungen/${s.slug}`}
-                        className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-white inline-flex items-center gap-1.5"
+                        className="px-5 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] text-xs font-mono-tech font-bold text-white inline-flex items-center gap-1.5 transition-colors"
                       >
                         <span>{t.servicesPage.moreDetails}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -107,7 +107,7 @@ export default function ServicesPage() {
 
                       <Link
                         href={`/termin-buchen?service=${s.id}`}
-                        className="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-xs font-bold text-white inline-flex items-center gap-1.5 shadow-md shadow-rose-950/50"
+                        className="px-5 py-2.5 rounded-xl bg-[#f40101] hover:bg-[#c90000] text-xs font-mono-tech font-bold text-white inline-flex items-center gap-1.5 shadow-md shadow-[#f40101]/30 transition-colors"
                       >
                         <span>{t.servicesPage.bookAppointment}</span>
                       </Link>
@@ -115,28 +115,28 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Right Column: Process & Specs Box */}
-                  <div className="lg:col-span-5 bg-slate-900/90 rounded-xl p-5 border border-slate-800 space-y-4">
-                    <div className="flex items-center justify-between text-xs border-b border-slate-800 pb-3">
-                      <div className="flex items-center gap-1.5 text-slate-400">
-                        <Clock className="w-3.5 h-3.5 text-rose-500" />
+                  <div className="lg:col-span-5 bg-[#0e1117] rounded-xl p-5 border border-white/[0.08] space-y-4">
+                    <div className="flex items-center justify-between text-xs border-b border-white/[0.08] pb-3">
+                      <div className="flex items-center gap-1.5 text-[#9ca3af] font-mono-tech">
+                        <Clock className="w-3.5 h-3.5 text-[#1c86ee]" />
                         <span>{t.serviceDetailPage.duration}</span>
                       </div>
-                      <strong className="text-slate-200">{s.typicalDuration[language]}</strong>
+                      <strong className="text-white font-mono-tech">{s.typicalDuration[language]}</strong>
                     </div>
 
                     <div>
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2.5">
+                      <span className="text-[11px] font-mono-tech font-bold uppercase tracking-wider text-[#9ca3af] block mb-2.5">
                         {t.serviceDetailPage.processTitle}:
                       </span>
                       <div className="space-y-2.5 text-xs">
                         {s.processSteps[language].map((step, pIdx) => (
                           <div key={pIdx} className="flex items-start gap-2">
-                            <span className="w-4 h-4 rounded-full bg-rose-950 border border-rose-800 text-rose-400 text-[10px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">
+                            <span className="w-4 h-4 rounded-full bg-[#1c86ee]/15 border border-[#1c86ee]/30 text-[#1c86ee] text-[10px] font-mono-tech font-bold flex items-center justify-center shrink-0 mt-0.5">
                               {pIdx + 1}
                             </span>
                             <div>
-                              <strong className="text-white block">{step.title}</strong>
-                              <span className="text-slate-400 text-[11px] leading-tight block">
+                              <strong className="text-white block font-sans-ui">{step.title}</strong>
+                              <span className="text-[#9ca3af] text-[11px] font-sans-ui leading-tight block">
                                 {step.desc}
                               </span>
                             </div>
@@ -145,7 +145,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
 
-                    <div className="pt-2 border-t border-slate-800 text-[11px] text-emerald-400 flex items-center gap-1.5">
+                    <div className="pt-2 border-t border-white/[0.08] text-[11px] font-mono-tech text-emerald-400 flex items-center gap-1.5">
                       <ShieldCheck className="w-4 h-4 shrink-0" />
                       <span>{t.valueProps.statWarrantyDesc}</span>
                     </div>

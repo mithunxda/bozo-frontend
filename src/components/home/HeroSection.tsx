@@ -11,7 +11,6 @@ import {
   ArrowUpRight,
   Star,
   ShieldCheck,
-  CheckCircle2,
   Cpu,
   Car,
   Clock,
@@ -39,9 +38,10 @@ export default function HeroSection() {
         {/* Obsidian Overlay Gradients */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#07080a]/90 via-[#07080a]/80 to-[#07080a]" />
         
-        {/* Laser Mesh Radial Orbs */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-red-600/10 blur-[140px] rounded-full pointer-events-none" />
-        <div className="absolute top-2/3 right-10 w-[400px] h-[300px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
+        {/* Laser Mesh Radial Orbs with Tri-Color Heritage */}
+        <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-[#1c86ee]/10 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/3 left-2/3 -translate-y-1/2 w-[550px] h-[350px] bg-[#9932cc]/8 blur-[130px] rounded-full pointer-events-none" />
+        <div className="absolute top-2/3 right-10 w-[500px] h-[320px] bg-[#f40101]/8 blur-[140px] rounded-full pointer-events-none" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto">
@@ -58,10 +58,6 @@ export default function HeroSection() {
                   {t.hero.badge}
                 </span>
               </div>
-              <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono-tech text-emerald-400 bg-emerald-950/40 border border-emerald-500/20 px-2.5 py-1 rounded-full">
-                <CheckCircle2 className="w-3 h-3 text-emerald-400" strokeWidth={1.5} />
-                {t.hero.eyebrow2}
-              </span>
             </div>
 
             {/* Massive Grotesque H1 */}
@@ -88,10 +84,10 @@ export default function HeroSection() {
 
               <a
                 href={`tel:${COMPANY.phoneTel}`}
-                className="btn-ghost-island justify-center font-mono-tech"
+                className="btn-ghost-island justify-center font-mono-tech whitespace-nowrap"
               >
-                <Phone className="w-4 h-4 text-[#ff3b30]" strokeWidth={1.5} />
-                <span>{t.hero.ctaCall}: {COMPANY.phoneFormatted}</span>
+                <Phone className="w-4 h-4 text-[#f40101] shrink-0" strokeWidth={1.5} />
+                <span className="whitespace-nowrap">{t.hero.ctaCall}: {COMPANY.phoneFormatted}</span>
               </a>
             </div>
 
@@ -113,7 +109,7 @@ export default function HeroSection() {
                 <span className="block text-[11px] font-mono-tech text-[#6b7280] uppercase tracking-wider">
                   {t.hero.trustMobilityLabel}
                 </span>
-                <span className="block font-display text-base font-bold text-[#ff3b30]">
+                <span className="block font-display text-base font-bold text-[#f40101]">
                   {t.hero.trustMobility}
                 </span>
               </div>
@@ -168,7 +164,7 @@ export default function HeroSection() {
                     <span className="text-[11px] font-mono-tech uppercase tracking-wider text-[#6b7280]">
                       {t.hero.brandLabel}
                     </span>
-                    <Car className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+                    <Car className="w-3.5 h-3.5 text-[#1c86ee]" strokeWidth={1.5} />
                   </div>
                   <div className="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-white/[0.02] border border-white/[0.05]">
                     {Object.keys(brandData).map((key) => {
@@ -179,7 +175,7 @@ export default function HeroSection() {
                           onClick={() => setActiveBrandKey(key)}
                           className={`px-2 py-2 rounded-xl text-xs font-mono-tech transition-all duration-300 text-center cursor-pointer ${
                             isActive
-                              ? "bg-white/[0.12] text-white font-bold border border-white/[0.15] shadow-lg shadow-black/40"
+                              ? "bg-white/[0.12] text-white font-bold border border-[#1c86ee]/40 shadow-lg shadow-black/40 ring-1 ring-[#1c86ee]/30"
                               : "text-[#9ca3af] hover:text-white hover:bg-white/[0.04] border border-transparent"
                           }`}
                         >
@@ -193,7 +189,7 @@ export default function HeroSection() {
                 {/* Telemetry Readout Box */}
                 <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold">
+                    <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold">
                       {brand.badge}
                     </span>
                     <span className="flex items-center gap-1 text-[11px] font-mono-tech text-emerald-400">
@@ -204,7 +200,7 @@ export default function HeroSection() {
 
                   <div className="space-y-1.5 text-xs font-mono-tech text-[#d1d5db]">
                     <div className="flex items-start gap-2">
-                      <Cpu className="w-3.5 h-3.5 text-[#ff3b30] shrink-0 mt-0.5" strokeWidth={1.5} />
+                      <Cpu className="w-3.5 h-3.5 text-[#1c86ee] shrink-0 mt-0.5" strokeWidth={1.5} />
                       <span className="leading-tight">{brand.protocol}</span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -212,7 +208,7 @@ export default function HeroSection() {
                       <span>{brand.leadTime}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <ShieldCheck className="w-3.5 h-3.5 text-[#ff3b30] shrink-0" strokeWidth={1.5} />
+                      <ShieldCheck className="w-3.5 h-3.5 text-[#f40101] shrink-0" strokeWidth={1.5} />
                       <span>{brand.mobility}</span>
                     </div>
                   </div>
@@ -225,7 +221,7 @@ export default function HeroSection() {
                     className="w-full flex items-center justify-between px-5 py-3.5 rounded-2xl bg-gradient-to-r from-white/[0.08] to-white/[0.03] hover:from-white/[0.12] hover:to-white/[0.06] border border-white/[0.1] text-white text-xs font-mono-tech font-semibold transition-all group"
                   >
                     <span>{brand.name} – {t.hero.ctaBook}</span>
-                    <span className="w-6 h-6 rounded-full bg-[#ff3b30] text-white flex items-center justify-center transition-transform group-hover:translate-x-1">
+                    <span className="w-6 h-6 rounded-full bg-[#f40101] text-white flex items-center justify-center transition-transform group-hover:translate-x-1 shadow-[0_0_10px_rgba(244,1,1,0.4)]">
                       <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={2} />
                     </span>
                   </Link>

@@ -11,17 +11,13 @@ export default function ValueProps() {
   return (
     <section className="relative py-24 lg:py-36 bg-[#07080a] text-white overflow-hidden border-t border-white/[0.06]">
       {/* Ambient background light */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[300px] bg-red-600/5 blur-[130px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-tr from-[#1c86ee]/5 via-[#9932cc]/5 to-[#f40101]/5 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-20">
         
         {/* Header Strip: Asymmetric Editorial Layout */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-12 border-b border-white/[0.08]">
           <div className="max-w-2xl space-y-4">
-            <span className="telemetry-badge">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
-              {t.valueProps.badge}
-            </span>
             <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.05]">
               {t.valueProps.title} <br />
               <span className="text-[#9ca3af]">{t.valueProps.titleHighlight}</span>
@@ -60,7 +56,7 @@ export default function ValueProps() {
               <span className="font-display text-4xl font-bold text-white">
                 {t.valueProps.statWarranty}
               </span>
-              <ShieldCheck className="w-5 h-5 text-[#ff3b30]" strokeWidth={1.5} />
+              <ShieldCheck className="w-5 h-5 text-[#1c86ee]" strokeWidth={1.5} />
             </div>
             <span className="font-sans-ui text-sm font-semibold text-white block mb-1">
               {t.valueProps.statWarrantyTitle}
@@ -87,10 +83,10 @@ export default function ValueProps() {
 
           <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.14] transition-all duration-500 group">
             <div className="flex items-center justify-between mb-4">
-              <span className="font-display text-4xl font-bold text-[#ff3b30]">
+              <span className="font-display text-4xl font-bold text-[#f40101]">
                 {t.valueProps.statMobility}
               </span>
-              <Bike className="w-5 h-5 text-[#ff3b30]" strokeWidth={1.5} />
+              <Bike className="w-5 h-5 text-[#f40101]" strokeWidth={1.5} />
             </div>
             <span className="font-sans-ui text-sm font-semibold text-white block mb-1">
               {t.valueProps.statMobilityTitle}

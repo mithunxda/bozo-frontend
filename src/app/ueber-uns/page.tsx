@@ -23,14 +23,14 @@ export default function AboutPage() {
   return (
     <div className="relative min-h-screen bg-[#07080a] text-white pt-36 sm:pt-44 pb-24 sm:pb-32 overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-red-600/5 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1c86ee]/10 via-[#9932cc]/8 to-[#f40101]/8 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="telemetry-badge">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1c86ee]" />
             {t.aboutPage.badge}
           </span>
 
@@ -87,7 +87,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <div className="doppelrand-shell">
             <div className="doppelrand-core !p-8 sm:!p-12 text-center space-y-4 bg-gradient-to-b from-white/[0.04] to-transparent">
-              <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold block">
+              <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold block">
                 {t.aboutPage.credoBadge}
               </span>
               <p className="font-display text-2xl sm:text-3xl font-bold text-white leading-snug">
@@ -137,10 +137,10 @@ export default function AboutPage() {
             <div className="doppelrand-shell">
               <div className="doppelrand-core space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="p-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-[#ff3b30]">
+                  <span className="p-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-[#f40101]">
                     <Car className="w-5 h-5" strokeWidth={1.5} />
                   </span>
-                  <span className="text-[10px] font-mono-tech text-[#ff3b30] bg-red-950/40 border border-red-500/20 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-mono-tech text-[#f40101] bg-[#f40101]/10 border border-[#f40101]/25 px-2 py-0.5 rounded-full">
                     {t.hero.trustMobility}
                   </span>
                 </div>
@@ -177,10 +177,10 @@ export default function AboutPage() {
             <div className="doppelrand-shell">
               <div className="doppelrand-core space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="p-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-blue-400">
+                  <span className="p-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-[#1c86ee]">
                     <Award className="w-5 h-5" strokeWidth={1.5} />
                   </span>
-                  <span className="text-[10px] font-mono-tech text-blue-400 bg-blue-950/40 border border-blue-500/20 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-mono-tech text-[#1c86ee] bg-[#1c86ee]/10 border border-[#1c86ee]/25 px-2 py-0.5 rounded-full">
                     {t.valueProps.statWarrantyBadge}
                   </span>
                 </div>
@@ -198,9 +198,9 @@ export default function AboutPage() {
 
         {/* Atelier Visitation CTA Terminal */}
         <div className="doppelrand-shell">
-          <div className="doppelrand-core !p-8 sm:!p-12 text-center space-y-6 bg-gradient-to-r from-red-950/30 via-[#0e1117] to-red-950/30">
+          <div className="doppelrand-core !p-8 sm:!p-12 text-center space-y-6 bg-gradient-to-r from-[#1c86ee]/10 via-[#0e1117] to-[#f40101]/10">
             <div className="space-y-2">
-              <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold block">
+              <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold block">
                 {t.aboutPage.ctaTitle}
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">
@@ -223,14 +223,14 @@ export default function AboutPage() {
                 href={`tel:${COMPANY.phoneTel}`}
                 className="btn-ghost-island w-full sm:w-auto justify-center font-mono-tech"
               >
-                <Phone className="w-4 h-4 text-[#ff3b30]" strokeWidth={1.5} />
+                <Phone className="w-4 h-4 text-[#f40101]" strokeWidth={1.5} />
                 <span>{t.aboutPage.ctaCall}: {COMPANY.phoneFormatted}</span>
               </a>
             </div>
 
             <div className="flex items-center justify-center gap-4 text-[11px] font-mono-tech text-[#6b7280] pt-2">
               <span className="flex items-center gap-1">
-                <MapPin className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+                <MapPin className="w-3.5 h-3.5 text-[#1c86ee]" strokeWidth={1.5} />
                 Schlieren (Zürich)
               </span>
               <span>·</span>

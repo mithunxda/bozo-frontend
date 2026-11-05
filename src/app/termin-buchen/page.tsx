@@ -11,13 +11,13 @@ export default function BookingPage() {
   return (
     <div className="relative min-h-screen bg-[#07080a] text-white pt-36 sm:pt-44 pb-24 sm:pb-32 overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-red-600/5 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1c86ee]/10 via-[#9932cc]/8 to-[#f40101]/8 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="telemetry-badge">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff3b30]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1c86ee]" />
             {t.booking.badge}
           </span>
 
@@ -36,7 +36,7 @@ export default function BookingPage() {
               {t.booking.guaranteePill}
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
-              <Clock className="w-3.5 h-3.5 text-[#ff3b30]" strokeWidth={1.5} />
+              <Clock className="w-3.5 h-3.5 text-[#1c86ee]" strokeWidth={1.5} />
               {t.booking.keySafePill}
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.06]">

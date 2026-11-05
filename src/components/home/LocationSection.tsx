@@ -33,7 +33,7 @@ export default function LocationSection() {
             {/* Header */}
             <div className="pb-4 border-b border-white/[0.08] flex items-center justify-between">
               <div>
-                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#ff3b30] font-bold block">
+                <span className="text-[10px] font-mono-tech uppercase tracking-widest text-[#1c86ee] font-bold block">
                   {t.location.badge}
                 </span>
                 <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mt-0.5">
@@ -45,7 +45,7 @@ export default function LocationSection() {
 
             {/* Address */}
             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-[#ff3b30] shrink-0 mt-0.5" strokeWidth={1.5} />
+              <MapPin className="w-5 h-5 text-[#1c86ee] shrink-0 mt-0.5" strokeWidth={1.5} />
               <div className="space-y-0.5 text-xs font-mono-tech">
                 <span className="font-bold text-white block text-sm">
                   {COMPANY.address.street}
@@ -71,7 +71,7 @@ export default function LocationSection() {
                     className="p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.04] flex items-center justify-between"
                   >
                     <span className="text-[#9ca3af] truncate pr-2">{item.from}</span>
-                    <span className="font-bold text-[#ff3b30] shrink-0">{item.time}</span>
+                    <span className="font-bold text-[#1c86ee] shrink-0">{item.time}</span>
                   </div>
                 ))}
               </div>
@@ -80,7 +80,7 @@ export default function LocationSection() {
             {/* Opening Hours Table */}
             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] space-y-2 text-xs font-mono-tech">
               <span className="font-bold text-white flex items-center gap-1.5 text-xs">
-                <Clock className="w-4 h-4 text-[#ff3b30]" strokeWidth={1.5} />
+                <Clock className="w-4 h-4 text-[#1c86ee]" strokeWidth={1.5} />
                 {t.footer.hours}
               </span>
               <div className="space-y-1.5 pt-1">
