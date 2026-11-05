@@ -7,3 +7,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Internationalization & Translation Mandate
+- The application must fully support both Dutch (`nl`) and English (`en`) (alongside German `de`).
+- All user-facing text displayed on the website must be localized using the translation system.
+- No hardcoded strings, buttons, badges, errors, or service details are permitted in templates.
+- Translation parity across `nl`, `en`, and `de` must be strictly maintained for all keys and data records.
+- Every displayed test and user interaction must verify that switching languages updates all copy seamlessly.
+

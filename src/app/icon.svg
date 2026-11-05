@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Dark Background Plate -->
+  <rect width="64" height="64" rx="14" fill="#07080a" />
+  <rect x="0.5" y="0.5" width="63" height="63" rx="13.5" stroke="rgba(255,255,255,0.12)" />
+
+  <!-- Iconic Chamfered Slanted 'B' -->
+  <g transform="translate(6, 10)">
+    <!-- 'B' Main Body (White) -->
+    <path
+      fill="#ffffff"
+      fill-rule="evenodd"
+      d="M 12 4 L 38 4 L 42 8 L 42 16 L 39 19 L 43 23 L 43 32 L 38 36 L 5 36 L 12 4 Z M 16 10 L 14 17 L 34 17 L 36 13 L 34 10 L 16 10 Z M 13 22 L 11 30 L 34 30 L 37 26 L 35 22 L 13 22 Z"
+    />
+    
+    <!-- Red Top Racing Stripe -->
+    <path
+      fill="#f40101"
+      d="M 32 23 L 49 23 L 48 26 L 31 26 Z"
+    />
+    <!-- Purple Middle Racing Stripe -->
+    <path
+      fill="#9932cc"
+      d="M 29 27 L 50 27 L 49 31 L 28 31 Z"
+    />
+    <!-- Blue Bottom Racing Stripe -->
+    <path
+      fill="#1c86ee"
+      d="M 26 32 L 51 32 L 50 36 L 25 36 Z"
+    />
+  </g>
+</svg>

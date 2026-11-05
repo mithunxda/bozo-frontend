@@ -1,26 +1,252 @@
 @import "tailwindcss";
 
+/* Vanguard UI Architect Design System - Bozo Automobile
+   Theme: Machined Obsidian & Ethereal Glass (Swiss Automotive Atelier)
+   Strict compliance with high-end-visual-design directives */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #07080a;
+  --surface: #0e1117;
+  --surface-card: #0a0c10;
+  --surface-elevated: #141822;
+  --surface-highlight: #1b202e;
+
+  --ink: #f9fbfc;
+  --ink-secondary: #9ca3af;
+  --ink-muted: #6b7280;
+
+  --accent: #ff3b30;
+  --accent-hover: #e0241a;
+  --accent-glow: rgba(255, 59, 48, 0.25);
+  --accent-ink: #ffffff;
+
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(255, 255, 255, 0.16);
+  --inner-highlight: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Typography Utility Classes */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.font-sans-ui {
+  font-family: var(--font-sans);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+/* Ambient Subtle Noise & Laser Lighting */
+.ambient-glow-orb {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.15;
+  background: radial-gradient(circle, #ff3b30 0%, transparent 70%);
+}
+
+/* Double-Bezel (Doppelrand) Nested Hardware Architecture */
+.doppelrand-shell {
+  position: relative;
+  padding: 6px;
+  border-radius: 2rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid var(--border-hairline);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+  transition: all 600ms var(--ease-spring);
+}
+
+.doppelrand-shell:hover {
+  border-color: var(--border-highlight);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 30px -10px var(--accent-glow);
+}
+
+.doppelrand-core {
+  position: relative;
+  height: 100%;
+  border-radius: calc(2rem - 6px);
+  background: var(--surface-card);
+  box-shadow: var(--inner-highlight);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Button-in-Button Island CTA */
+.btn-island {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #ff3b30 0%, #d92015 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 0 25px rgba(255, 59, 48, 0.35);
+  transition: all 500ms var(--ease-spring);
+}
+
+.btn-island:hover {
+  box-shadow: 0 0 35px rgba(255, 59, 48, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-island:active {
+  transform: scale(0.98);
+}
+
+.btn-island-icon {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+  margin-right: -0.625rem;
+  transition: all 500ms var(--ease-spring);
+}
+
+.btn-island:hover .btn-island-icon {
+  transform: translate(3px, -2px) scale(1.06);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Secondary Ghost Island Button */
+.btn-ghost-island {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #f9fbfc;
+  border: 1px solid var(--border-hairline);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  backdrop-filter: blur(16px);
+  transition: all 500ms var(--ease-spring);
+}
+
+.btn-ghost-island:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--border-highlight);
+  transform: translateY(-1px);
+}
+
+.btn-ghost-island:active {
+  transform: scale(0.98);
+}
+
+/* Micro Telemetry Badges */
+.telemetry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-hairline);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  backdrop-filter: blur(12px);
+}
+
+/* Fluid Keyframe Motion */
+@keyframes fluid-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-fluid-fade {
+  animation: fluid-fade-up 900ms var(--ease-cinematic) forwards;
+}
+
+@keyframes radar-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+.radar-beacon {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background-color: #4ade80;
+  animation: radar-pulse 2s infinite var(--ease-spring);
+}
+
+/* Selection and focus styling */
+::selection {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
